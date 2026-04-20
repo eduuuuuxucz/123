@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💝 Una sorpresa para ti</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Dancing+Script:wght@700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Partículas flotantes de fondo -->
+        <div class="floating-particles">
+            <span>✨</span><span>💕</span><span>🌸</span><span>⭐</span><span>💗</span>
+            <span>✨</span><span>💕</span><span>🌸</span><span>⭐</span><span>💗</span>
+        </div>
+
+        <!-- Mensaje inicial -->
+        <div class="initial-message" id="initialMessage">
+            <div class="message-card">
+                <div class="card-decoration">
+                    <span class="deco-top-left">🌸</span>
+                    <span class="deco-top-right">🌸</span>
+                    <span class="deco-bottom-left">💝</span>
+                    <span class="deco-bottom-right">💝</span>
+                </div>
+                <h1 class="title">¡Tienes una sorpresa!</h1>
+                <p class="subtitle">Presiona el regalo para abrir</p>
+                <button class="gift-button" id="giftButton">
+                    <span class="gift-icon">🎁</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- La caja de regalo 3D -->
+        <div class="gift-scene" id="giftScene">
+            <div class="gift-box" id="giftBox">
+                <!-- Tapa de la caja -->
+                <div class="box-lid" id="boxLid">
+                    <div class="lid-ribbon"></div>
+                    <div class="lid-bow">
+                        <div class="bow-left"></div>
+                        <div class="bow-right"></div>
+                        <div class="bow-center"></div>
+                    </div>
+                    <!-- Caritas decorativas en la tapa -->
+                    <div class="lid-faces">
+                        <span class="face">🥺</span>
+                        <span class="face">💕</span>
+                        <span class="face">🥺</span>
+                    </div>
+                </div>
+
+                <!-- Cuerpo de la caja -->
+                <div class="box-body">
+                    <div class="box-front">
+                        <!-- Decoraciones estilo Sanrio -->
+                        <div class="sanrio-characters">
+                            <span class="sanrio-char" style="--delay: 0s">🧸</span>
+                            <span class="sanrio-char" style="--delay: 0.2s">🎀</span>
+                            <span class="sanrio-char" style="--delay: 0.4s">🧸</span>
+                        </div>
+                        <div class="box-pattern">
+                            <div class="pattern-row">🌸 · ✨ · 🌸 · ✨ · 🌸</div>
+                        </div>
+                        <!-- Listón central -->
+                        <div class="center-ribbon"></div>
+                        <div class="corner-decorations">
+                            <span class="corner corner-tl">🌹</span>
+                            <span class="corner corner-tr">🌹</span>
+                            <span class="corner corner-bl">🌷</span>
+                            <span class="corner corner-br">🌷</span>
+                        </div>
+                    </div>
+                    <div class="box-side-left"></div>
+                    <div class="box-side-right"></div>
+                    <div class="box-back"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- El ramo de tulipanes -->
+        <div class="bouquet-container" id="bouquetContainer">
+            <div class="bouquet-wrapper">
+                <!-- Envoltura del ramo -->
+                <div class="bouquet-wrap">
+                    <div class="wrap-paper paper-1"></div>
+                    <div class="wrap-paper paper-2"></div>
+                    <div class="wrap-paper paper-3"></div>
+                    <div class="wrap-ribbon">
+                        <div class="ribbon-band"></div>
+                        <div class="ribbon-bow">
+                            <div class="r-bow-left"></div>
+                            <div class="r-bow-right"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tulipanes rosados -->
+                <div class="tulip tulip-1" style="--hue: 340;">
+                    <div class="tulip-stem"></div>
+                    <div class="tulip-flower">
+                        <div class="petal petal-1"></div>
+                        <div class="petal petal-2"></div>
+                        <div class="petal petal-3"></div>
+                    </div>
+                    <div class="tulip-leaf leaf-left"></div>
+                    <div class="tulip-leaf leaf-right"></div>
+                </div>
+
+                <div class="tulip tulip-2" style="--hue: 350;">
+                    <div class="tulip-stem"></div>
+                    <div class="tulip-flower">
+                        <div class="petal petal-1"></div>
+                        <div class="petal petal-2"></div>
+                        <div class="petal petal-3"></div>
+                    </div>
+                    <div class="tulip-leaf leaf-left"></div>
+                    <div class="tulip-leaf leaf-right"></div>
+                </div>
+
+                <div class="tulip tulip-3" style="--hue: 330;">
+                    <div class="tulip-stem"></div>
+                    <div class="tulip-flower">
+                        <div class="petal petal-1"></div>
+                        <div class="petal petal-2"></div>
+                        <div class="petal petal-3"></div>
+                    </div>
+                    <div class="tulip-leaf leaf-left"></div>
+                    <div class="tulip-leaf leaf-right"></div>
+                </div>
+
+                <div class="tulip tulip-4" style="--hue: 0;">
+                    <div class="tulip-stem"></div>
+                    <div class="tulip-flower tulip-white">
+                        <div class="petal petal-1"></div>
+                        <div class="petal petal-2"></div>
+                        <div class="petal petal-3"></div>
+                    </div>
+                    <div class="tulip-leaf leaf-left"></div>
+                    <div class="tulip-leaf leaf-right"></div>
+                </div>
+
+                <div class="tulip tulip-5" style="--hue: 345;">
+                    <div class="tulip-stem"></div>
+                    <div class="tulip-flower">
+                        <div class="petal petal-1"></div>
+                        <div class="petal petal-2"></div>
+                        <div class="petal petal-3"></div>
+                    </div>
+                    <div class="tulip-leaf leaf-left"></div>
+                    <div class="tulip-leaf leaf-right"></div>
+                </div>
+
+                <div class="tulip tulip-6" style="--hue: 355;">
+                    <div class="tulip-stem"></div>
+                    <div class="tulip-flower">
+                        <div class="petal petal-1"></div>
+                        <div class="petal petal-2"></div>
+                        <div class="petal petal-3"></div>
+                    </div>
+                    <div class="tulip-leaf leaf-left"></div>
+                    <div class="tulip-leaf leaf-right"></div>
+                </div>
+
+                <div class="tulip tulip-7" style="--hue: 1;">
+                    <div class="tulip-stem"></div>
+                    <div class="tulip-flower tulip-white">
+                        <div class="petal petal-1"></div>
+                        <div class="petal petal-2"></div>
+                        <div class="petal petal-3"></div>
+                    </div>
+                    <div class="tulip-leaf leaf-left"></div>
+                    <div class="tulip-leaf leaf-right"></div>
+                </div>
+
+                <div class="tulip tulip-8" style="--hue: 335;">
+                    <div class="tulip-stem"></div>
+                    <div class="tulip-flower">
+                        <div class="petal petal-1"></div>
+                        <div class="petal petal-2"></div>
+                        <div class="petal petal-3"></div>
+                    </div>
+                    <div class="tulip-leaf leaf-left"></div>
+                    <div class="tulip-leaf leaf-right"></div>
+                </div>
+
+                <!-- Decoraciones con personajes -->
+                <div class="bouquet-decorations">
+                    <span class="deco-char deco-1">🧸</span>
+                    <span class="deco-char deco-2">🎀</span>
+                    <span class="deco-char deco-3">💕</span>
+                    <span class="deco-char deco-4">⭐</span>
+                </div>
+            </div>
+
+            <!-- Mensaje final -->
+            <div class="final-message" id="finalMessage">
+                <div class="message-bubble">
+                    <div class="bubble-hearts">
+                        <span>💗</span><span>💕</span><span>💖</span>
+                    </div>
+                    <h2>Para ti 💝</h2>
+                    <p class="love-text">No es mucho, pero quería hacerte este detalle</p>
+                    <div class="signature">
+                        <span>Con cariño</span>
+                    </div>
+                    <div class="bubble-hearts bottom">
+                        <span>💕</span><span>💗</span><span>💖</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

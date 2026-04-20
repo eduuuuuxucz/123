@@ -1,0 +1,1088 @@
+/* ========================================
+   ESTILOS ELABORADOS - CAJA DE REGALO ROMÁNTICA
+   ======================================== */
+
+:root {
+    --pink-soft: #FFB6C1;
+    --pink-medium: #FF69B4;
+    --pink-dark: #FF1493;
+    --pink-pastel: #FFF0F5;
+    --rose-gold: #E8B4B8;
+    --white-rose: #FFF5F5;
+    --gold-shimmer: #FFD700;
+    --purple-soft: #DDA0DD;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #FFF0F5 0%, #FFE4EC 50%, #FFD6E7 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* ========================================
+   PARTÍCULAS FLOTANTES (PURPURINAS)
+   ======================================== */
+
+.floating-particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.floating-particles span {
+    position: absolute;
+    font-size: 1.5rem;
+    animation: floatParticle 8s ease-in-out infinite;
+    opacity: 0.7;
+}
+
+.floating-particles span:nth-child(1) {
+    left: 5%;
+    top: 10%;
+    animation-delay: 0s;
+}
+
+.floating-particles span:nth-child(2) {
+    left: 15%;
+    top: 80%;
+    animation-delay: 1s;
+}
+
+.floating-particles span:nth-child(3) {
+    left: 25%;
+    top: 30%;
+    animation-delay: 2s;
+}
+
+.floating-particles span:nth-child(4) {
+    left: 40%;
+    top: 70%;
+    animation-delay: 0.5s;
+}
+
+.floating-particles span:nth-child(5) {
+    left: 55%;
+    top: 20%;
+    animation-delay: 1.5s;
+}
+
+.floating-particles span:nth-child(6) {
+    left: 70%;
+    top: 90%;
+    animation-delay: 2.5s;
+}
+
+.floating-particles span:nth-child(7) {
+    left: 80%;
+    top: 40%;
+    animation-delay: 0.8s;
+}
+
+.floating-particles span:nth-child(8) {
+    left: 90%;
+    top: 60%;
+    animation-delay: 1.8s;
+}
+
+.floating-particles span:nth-child(9) {
+    left: 35%;
+    top: 50%;
+    animation-delay: 3s;
+}
+
+.floating-particles span:nth-child(10) {
+    left: 65%;
+    top: 35%;
+    animation-delay: 2.2s;
+}
+
+@keyframes floatParticle {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg) scale(1);
+        opacity: 0.7;
+    }
+
+    25% {
+        transform: translateY(-30px) rotate(90deg) scale(1.2);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(180deg) scale(0.9);
+        opacity: 0.8;
+    }
+
+    75% {
+        transform: translateY(-40px) rotate(270deg) scale(1.1);
+        opacity: 1;
+    }
+}
+
+/* ========================================
+   MENSAJE INICIAL
+   ======================================== */
+
+.container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.initial-message {
+    text-align: center;
+    animation: fadeInScale 1s ease-out;
+}
+
+.initial-message.hidden {
+    display: none;
+}
+
+.message-card {
+    background: linear-gradient(145deg, #FFFFFF, var(--pink-pastel));
+    border-radius: 30px;
+    padding: 50px 60px;
+    box-shadow:
+        0 20px 60px rgba(255, 105, 180, 0.3),
+        0 0 100px rgba(255, 182, 193, 0.4),
+        inset 0 2px 10px rgba(255, 255, 255, 0.8);
+    position: relative;
+    border: 3px solid var(--pink-soft);
+}
+
+.card-decoration span {
+    position: absolute;
+    font-size: 2rem;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.deco-top-left {
+    top: 15px;
+    left: 20px;
+}
+
+.deco-top-right {
+    top: 15px;
+    right: 20px;
+    animation-delay: 0.5s;
+}
+
+.deco-bottom-left {
+    bottom: 15px;
+    left: 20px;
+    animation-delay: 1s;
+}
+
+.deco-bottom-right {
+    bottom: 15px;
+    right: 20px;
+    animation-delay: 1.5s;
+}
+
+.title {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    background: linear-gradient(135deg, var(--pink-dark), var(--pink-medium), var(--purple-soft));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 10px rgba(255, 105, 180, 0.3);
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--pink-dark);
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+/* ========================================
+   BOTÓN DE REGALO
+   ======================================== */
+
+.gift-button {
+    background: linear-gradient(145deg, var(--pink-medium), var(--pink-dark));
+    border: none;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow:
+        0 10px 30px rgba(255, 20, 147, 0.4),
+        0 0 60px rgba(255, 105, 180, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.gift-button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg,
+            transparent 30%,
+            rgba(255, 255, 255, 0.3) 50%,
+            transparent 70%);
+    animation: shimmer 3s infinite;
+}
+
+.gift-button:hover {
+    transform: scale(1.15) rotate(5deg);
+    box-shadow:
+        0 15px 40px rgba(255, 20, 147, 0.5),
+        0 0 80px rgba(255, 105, 180, 0.5);
+}
+
+.gift-icon {
+    font-size: 3.5rem;
+    display: block;
+    animation: bounce 1s ease-in-out infinite;
+    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%) rotate(45deg);
+    }
+
+    100% {
+        transform: translateX(100%) rotate(45deg);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ========================================
+   ESCENA DE LA CAJA 3D
+   ======================================== */
+
+.gift-scene {
+    display: none;
+    perspective: 1000px;
+    margin-bottom: 40px;
+}
+
+.gift-scene.active {
+    display: block;
+    animation: boxAppear 1s ease-out;
+}
+
+@keyframes boxAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.5) rotateY(-30deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotateY(0);
+    }
+}
+
+.gift-box {
+    position: relative;
+    transform-style: preserve-3d;
+    transform: rotateX(10deg);
+    animation: boxFloat 4s ease-in-out infinite;
+}
+
+@keyframes boxFloat {
+
+    0%,
+    100% {
+        transform: rotateX(10deg) translateY(0);
+    }
+
+    50% {
+        transform: rotateX(10deg) translateY(-15px);
+    }
+}
+
+/* TAPA DE LA CAJA */
+.box-lid {
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px;
+    height: 70px;
+    background: linear-gradient(145deg, #FFB6C1, #FF69B4);
+    border-radius: 10px 10px 5px 5px;
+    transform-style: preserve-3d;
+    transform: translateX(-50%) rotateX(0deg);
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-shadow:
+        inset 0 -5px 15px rgba(255, 255, 255, 0.4),
+        inset 0 5px 10px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.box-lid.open {
+    transform: translateX(-50%) rotateX(-120deg) translateY(-50px);
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.2),
+        inset 0 -5px 15px rgba(255, 255, 255, 0.4);
+}
+
+.lid-ribbon {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 100%;
+    background: linear-gradient(90deg, #FF1493, #FF69B4, #FF1493);
+    border-radius: 5px;
+}
+
+.lid-bow {
+    position: absolute;
+    top: -35px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bow-left,
+.bow-right {
+    position: absolute;
+    width: 45px;
+    height: 35px;
+    background: linear-gradient(145deg, #FF1493, #FF69B4);
+    border-radius: 50% 50% 50% 50%;
+    box-shadow: inset 0 5px 10px rgba(255, 255, 255, 0.4);
+}
+
+.bow-left {
+    left: -40px;
+    transform: rotate(-30deg);
+}
+
+.bow-right {
+    left: 0;
+    transform: rotate(30deg);
+}
+
+.bow-center {
+    position: absolute;
+    left: -15px;
+    top: 5px;
+    width: 30px;
+    height: 25px;
+    background: linear-gradient(145deg, #FF69B4, #FF1493);
+    border-radius: 50%;
+    box-shadow: inset 0 3px 8px rgba(255, 255, 255, 0.4);
+}
+
+.lid-faces {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 30px;
+}
+
+.lid-faces .face {
+    font-size: 1.5rem;
+    animation: facePulse 2s ease-in-out infinite;
+}
+
+.lid-faces .face:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+@keyframes facePulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+}
+
+/* CUERPO DE LA CAJA */
+.box-body {
+    position: relative;
+    width: 260px;
+    height: 200px;
+    transform-style: preserve-3d;
+}
+
+.box-front {
+    position: absolute;
+    width: 260px;
+    height: 200px;
+    background: linear-gradient(180deg, #FFB6C1 0%, #FF69B4 50%, #FF1493 100%);
+    border-radius: 15px;
+    transform: translateZ(30px);
+    box-shadow:
+        inset 0 0 50px rgba(255, 255, 255, 0.2),
+        inset 0 -20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Patrón decorativo */
+.box-pattern {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 8px;
+}
+
+/* Personajes Sanrio */
+.sanrio-characters {
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 30px;
+}
+
+.sanrio-char {
+    font-size: 1.8rem;
+    animation: charBounce 2s ease-in-out infinite;
+    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
+}
+
+.sanrio-char:nth-child(2) {
+    animation-delay: 0.3s;
+    font-size: 2rem;
+}
+
+@keyframes charBounce {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+
+    25% {
+        transform: translateY(-5px) rotate(-5deg);
+    }
+
+    75% {
+        transform: translateY(-5px) rotate(5deg);
+    }
+}
+
+/* Listón central */
+.center-ribbon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 25px;
+    background: linear-gradient(90deg, transparent, #FF1493 20%, #FF69B4 50%, #FF1493 80%, transparent);
+    transform: translateY(-50%);
+}
+
+.center-ribbon::before,
+.center-ribbon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    background: #FF1493;
+    border-radius: 50%;
+    border: 3px solid #fff;
+}
+
+/* Esquinas decoradas */
+.corner-decorations .corner {
+    position: absolute;
+    font-size: 1.3rem;
+    filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.2));
+}
+
+.corner-tl {
+    top: 8px;
+    left: 10px;
+}
+
+.corner-tr {
+    top: 8px;
+    right: 10px;
+}
+
+.corner-bl {
+    bottom: 8px;
+    left: 10px;
+}
+
+.corner-br {
+    bottom: 8px;
+    right: 10px;
+}
+
+/* Lados de la caja 3D */
+.box-side-left {
+    position: absolute;
+    width: 60px;
+    height: 200px;
+    background: linear-gradient(90deg, #FF1493, #FF69B4);
+    transform: rotateY(-90deg) translateZ(130px);
+    border-radius: 15px;
+}
+
+.box-side-right {
+    position: absolute;
+    width: 60px;
+    height: 200px;
+    background: linear-gradient(90deg, #FF69B4, #FF1493);
+    transform: rotateY(90deg) translateZ(130px);
+    border-radius: 15px;
+}
+
+.box-back {
+    position: absolute;
+    width: 260px;
+    height: 200px;
+    background: linear-gradient(180deg, #FF69B4, #FF1493);
+    transform: translateZ(-30px);
+    border-radius: 15px;
+}
+
+/* ========================================
+   RAMO DE TULIPANES
+   ======================================== */
+
+.bouquet-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+.bouquet-container.active {
+    display: flex;
+    animation: bouquetReveal 1.5s ease-out;
+}
+
+@keyframes bouquetReveal {
+    from {
+        opacity: 0;
+        transform: translateY(100px) scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.bouquet-wrapper {
+    position: relative;
+    width: 350px;
+    height: 450px;
+    animation: bouquetFloat 5s ease-in-out infinite;
+}
+
+@keyframes bouquetFloat {
+
+    0%,
+    100% {
+        transform: rotate(-2deg);
+    }
+
+    50% {
+        transform: rotate(2deg);
+    }
+}
+
+/* Envoltura del ramo */
+.bouquet-wrap {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 150px;
+}
+
+.wrap-paper {
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.paper-1 {
+    bottom: 0;
+    left: 0;
+    width: 180px;
+    height: 120px;
+    background: linear-gradient(135deg, #FFE4EC, #FFF0F5);
+    transform: rotate(-15deg);
+    border: 2px solid rgba(255, 182, 193, 0.5);
+}
+
+.paper-2 {
+    bottom: 0;
+    right: 0;
+    width: 180px;
+    height: 120px;
+    background: linear-gradient(225deg, #FFE4EC, #FFF0F5);
+    transform: rotate(15deg);
+    border: 2px solid rgba(255, 182, 193, 0.5);
+}
+
+.paper-3 {
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 160px;
+    height: 100px;
+    background: linear-gradient(180deg, #FFF0F5, #FFE4EC);
+    border: 2px solid rgba(255, 182, 193, 0.5);
+}
+
+.wrap-ribbon {
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+}
+
+.ribbon-band {
+    width: 220px;
+    height: 30px;
+    background: linear-gradient(90deg, #FF69B4, #FF1493, #FF69B4);
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.ribbon-bow {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.r-bow-left,
+.r-bow-right {
+    position: absolute;
+    width: 40px;
+    height: 30px;
+    background: linear-gradient(145deg, #FF69B4, #FF1493);
+    border-radius: 50%;
+    box-shadow: inset 0 3px 8px rgba(255, 255, 255, 0.5);
+}
+
+.r-bow-left {
+    left: -35px;
+    transform: rotate(-25deg);
+}
+
+.r-bow-right {
+    left: 0;
+    transform: rotate(25deg);
+}
+
+/* TULIPANES */
+.tulip {
+    position: absolute;
+    bottom: 130px;
+    transform-origin: bottom center;
+}
+
+.tulip-1 {
+    left: 50%;
+    transform: translateX(-50%) rotate(-25deg);
+}
+
+.tulip-2 {
+    left: 50%;
+    transform: translateX(-50%) rotate(-15deg);
+}
+
+.tulip-3 {
+    left: 50%;
+    transform: translateX(-50%) rotate(-5deg);
+}
+
+.tulip-4 {
+    left: 50%;
+    transform: translateX(-50%) rotate(5deg);
+}
+
+.tulip-5 {
+    left: 50%;
+    transform: translateX(-50%) rotate(15deg);
+}
+
+.tulip-6 {
+    left: 50%;
+    transform: translateX(-50%) rotate(25deg);
+}
+
+.tulip-7 {
+    left: 50%;
+    transform: translateX(-50%) rotate(-35deg);
+}
+
+.tulip-8 {
+    left: 50%;
+    transform: translateX(-50%) rotate(35deg);
+}
+
+.tulip-stem {
+    width: 6px;
+    height: 180px;
+    background: linear-gradient(90deg, #228B22, #32CD32, #228B22);
+    border-radius: 3px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.tulip-flower {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 60px;
+}
+
+.petal {
+    position: absolute;
+    width: 25px;
+    height: 55px;
+    background: linear-gradient(180deg,
+            hsl(var(--hue), 80%, 75%) 0%,
+            hsl(var(--hue), 85%, 65%) 50%,
+            hsl(var(--hue), 90%, 55%) 100%);
+    border-radius: 50% 50% 45% 45%;
+    box-shadow:
+        inset 0 5px 15px rgba(255, 255, 255, 0.4),
+        inset 0 -10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.petal-1 {
+    left: 0;
+    transform: rotate(-20deg);
+    z-index: 1;
+}
+
+.petal-2 {
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    width: 28px;
+    height: 60px;
+}
+
+.petal-3 {
+    right: 0;
+    transform: rotate(20deg);
+    z-index: 2;
+}
+
+/* Tulipán blanco */
+.tulip-white .petal {
+    background: linear-gradient(180deg,
+            #FFFFFF 0%,
+            #FFF5F5 40%,
+            #FFE4EC 100%);
+    border: 1px solid rgba(255, 182, 193, 0.3);
+}
+
+.tulip-leaf {
+    position: absolute;
+    width: 20px;
+    height: 60px;
+    background: linear-gradient(90deg, #228B22, #32CD32);
+    border-radius: 50% 50% 50% 50%;
+    bottom: 20px;
+}
+
+.leaf-left {
+    left: -18px;
+    transform: rotate(-40deg);
+}
+
+.leaf-right {
+    right: -18px;
+    transform: rotate(40deg);
+}
+
+/* Decoraciones del ramo */
+.bouquet-decorations {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 150px;
+    pointer-events: none;
+}
+
+.deco-char {
+    position: absolute;
+    font-size: 2rem;
+    filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
+    animation: decoFloat 3s ease-in-out infinite;
+}
+
+.deco-1 {
+    top: 50px;
+    left: 20px;
+    animation-delay: 0s;
+}
+
+.deco-2 {
+    top: 80px;
+    right: 25px;
+    animation-delay: 0.5s;
+}
+
+.deco-3 {
+    top: 30px;
+    right: 60px;
+    animation-delay: 1s;
+}
+
+.deco-4 {
+    top: 100px;
+    left: 40px;
+    animation-delay: 1.5s;
+}
+
+@keyframes decoFloat {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(5deg);
+    }
+}
+
+/* ========================================
+   MENSAJE FINAL
+   ======================================== */
+
+.final-message {
+    display: none;
+    animation: messageAppear 1s ease-out 0.5s both;
+}
+
+.final-message.active {
+    display: block;
+}
+
+@keyframes messageAppear {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.message-bubble {
+    background: linear-gradient(145deg, #FFFFFF, var(--pink-pastel));
+    border-radius: 30px;
+    padding: 40px 60px;
+    text-align: center;
+    box-shadow:
+        0 20px 60px rgba(255, 105, 180, 0.3),
+        0 0 100px rgba(255, 182, 193, 0.4);
+    border: 3px solid var(--pink-soft);
+    position: relative;
+}
+
+.bubble-hearts {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.bubble-hearts span {
+    font-size: 1.5rem;
+    animation: heartBeat 1.5s ease-in-out infinite;
+}
+
+.bubble-hearts span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.bubble-hearts span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes heartBeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+}
+
+.message-bubble h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, var(--pink-dark), var(--purple-soft));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 15px;
+}
+
+.love-text {
+    font-size: 1.2rem;
+    color: var(--pink-dark);
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.signature {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.5rem;
+    color: var(--pink-medium);
+}
+
+.bubble-hearts.bottom {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 2.2rem;
+    }
+
+    .message-card {
+        padding: 35px 40px;
+    }
+
+    .gift-button {
+        width: 100px;
+        height: 100px;
+    }
+
+    .gift-icon {
+        font-size: 3rem;
+    }
+
+    .box-lid {
+        width: 220px;
+        height: 55px;
+        top: -50px;
+    }
+
+    .box-body {
+        width: 200px;
+        height: 160px;
+    }
+
+    .box-front {
+        width: 200px;
+        height: 160px;
+    }
+
+    .bouquet-wrapper {
+        width: 280px;
+        height: 380px;
+    }
+
+    .tulip-stem {
+        height: 140px;
+    }
+
+    .tulip-flower {
+        top: -40px;
+        width: 40px;
+        height: 50px;
+    }
+
+    .message-bubble {
+        padding: 30px 40px;
+    }
+
+    .message-bubble h2 {
+        font-size: 2rem;
+    }
+}
